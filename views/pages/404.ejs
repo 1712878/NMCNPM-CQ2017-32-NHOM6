@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../../elements/header %>
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <% include ../../elements/nav-left %>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <% include ../../elements/nav-top %>
+            </div>
+            <!-- begin content value -->
+            <div class="container-fluid">
+                <div class="text-center mt-5">
+                    <div class="error mx-auto" data-text="404">
+                        <p class="m-0">404</p>
+                    </div>
+                    <p class="text-dark mb-5 lead">Không tìm thất trang này</p>
+                    <p class="text-black-50 mb-0">Dường như bạn đã truy cập đường dẫn không đúng...</p>
+                    <a href="/">← Quay lại trang chủ</a>
+                </div>
+            </div>
+            <!-- end content value -->
+            <% include ../../elements/footer %>
+        </div>
+        <% include ../../elements/scroll-top %>
+    </div>
+    <% include ../../elements/script %>
+</body>
+
+</html>

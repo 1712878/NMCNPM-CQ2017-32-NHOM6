@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../../elements/header %>
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <% include ../../elements/nav-left %>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <% include ../../elements/nav-top %>
+            </div>
+            <!-- begin content value -->
+            <div class="container-fluid">
+                <div class="card shadow">
+                    <div class="card-header py-3">
+                        <p class="text-primary m-0 font-weight-bold">Danh sách đơn đặt hàng</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 text-nowrap">
+                                <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable">
+                                    <label>Hiện thị&nbsp;
+                                        <select class="form-control form-control-sm custom-select custom-select-sm">
+                                            <option value="10" selected="">10</option>
+                                            <option value="25">25</option>
+                                            <option value="50">50</option>
+                                            <option value="100">100</option>
+                                        </select>&nbsp;
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-md-right dataTables_filter" id="dataTable_filter">
+                                    <label>
+                                        <input type="search" class="form-control form-control-sm" aria-controls="dataTable"
+                                            placeholder="Tìm kiếm">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                            <table class="table dataTable my-0" id="dataTable">
+                                <thead>
+                                    <tr>
+                                        <th>Người nhận</th>
+                                        <th>Địa chỉ nhận hàng</th>
+                                        <th>Mặt hàng</th>
+                                        <th>Ngày tạo đơn</th>
+                                        <th>Số tiền</th>
+                                        <th>Trạng thái</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img class="rounded-circle mr-2" width="30" height="30"
+                                                src="assets/img/avatars/avatar1.jpeg">Nguyễn Văn A
+                                        </td>
+                                        <td>Bình Thạnh, TP. HCM</td>
+                                        <td>Iphone 7</td>
+                                        <td>2008/11/28</td>
+                                        <td>$162,700</td>
+                                        <td>Đã giao</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="rounded-circle mr-2" width="30" height="30"
+                                                src="assets/img/avatars/avatar2.jpeg">Nguyễn Văn A
+                                        </td>
+                                        <td>Quận 4, TP. HCM</td>
+                                        <td>Laptop</td>
+                                        <td>2009/10/09
+                                            <br>
+                                        </td>
+                                        <td>$1,200,000</td>
+                                        <td>Chưa giao</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="rounded-circle mr-2" width="30" height="30"
+                                                src="assets/img/avatars/avatar3.jpeg">Nguyễn Văn A
+                                        </td>
+                                        <td>Quận 9, TP. HCM</td>
+                                        <td>S8 plus</td>
+                                        <td>2009/01/12
+                                            <br>
+                                        </td>
+                                        <td>$86,000</td>
+                                        <td>Đã giao</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="rounded-circle mr-2" width="30" height="30"
+                                                src="assets/img/avatars/avatar4.jpeg">Nguyễn Văn A
+                                        </td>
+                                        <td>Quận 4, TP. HCM</td>
+                                        <td>S8 plus</td>
+                                        <td>2012/10/13
+                                            <br>
+                                        </td>
+                                        <td>$132,000</td>
+                                        <td>Chưa giao</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="rounded-circle mr-2" width="30" height="30"
+                                                src="assets/img/avatars/avatar5.jpeg">Nguyễn Văn A
+                                        </td>
+                                        <td>Quận 9, TP. HCM</td>
+                                        <td>Iphone 7</td>
+                                        <td>2011/06/07
+                                            <br>
+                                        </td>
+                                        <td>$206,850</td>
+                                        <td>Đã giao</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="rounded-circle mr-2" width="30" height="30"
+                                                src="assets/img/avatars/avatar1.jpeg">Nguyễn Văn A
+                                        </td>
+                                        <td>Bình Thạnh, TP. HCM</td>
+                                        <td>Tai nghe</td>
+                                        <td>2012/12/02
+                                            <br>
+                                        </td>
+                                        <td>$372,000</td>
+                                        <td>Chưa giao</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="rounded-circle mr-2" width="30" height="30"
+                                                src="assets/img/avatars/avatar2.jpeg">Nguyễn Văn A
+                                            <br>
+                                        </td>
+                                        <td>Bình Thạnh, TP. HCM</td>
+                                        <td>S8 plus</td>
+                                        <td>2011/05/03
+                                            <br>
+                                        </td>
+                                        <td>$163,500</td>
+                                        <td>Đã giao</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="rounded-circle mr-2" width="30" height="30"
+                                                src="assets/img/avatars/avatar3.jpeg">Nguyễn Văn A
+                                        </td>
+                                        <td>Quận 4, TP. HCM</td>
+                                        <td>Iphone 7</td>
+                                        <td>2011/12/12
+                                            <br>
+                                        </td>
+                                        <td>$106,450</td>
+                                        <td>Chưa giao</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="rounded-circle mr-2" width="30" height="30"
+                                                src="assets/img/avatars/avatar4.jpeg">Nguyễn Văn A
+                                        </td>
+                                        <td>Bình Thạnh, TP. HCM</td>
+                                        <td>S8 plus</td>
+                                        <td>2011/12/06
+                                            <br>
+                                        </td>
+                                        <td>$145,600</td>
+                                        <td>Đang giao</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="rounded-circle mr-2" width="30" height="30"
+                                                src="assets/img/avatars/avatar5.jpeg">Nguyễn Văn A
+                                        </td>
+                                        <td>Quận 9, TP. HCM</td>
+                                        <td>S8 plus</td>
+                                        <td>2012/03/29
+                                            <br>
+                                        </td>
+                                        <td>$433,060</td>
+                                        <td>Chưa giao</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td>
+                                            <strong>Người nhận</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Địa chỉ</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Mặt hàng</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Ngày tạo đơn</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Số tiền</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Trạng thái</strong>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 align-self-center">
+                                <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Hiện thị 1 đến 10
+                                    của 27</p>
+                            </div>
+                            <div class="col-md-6">
+                                <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                                    <ul class="pagination">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">»</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end content value -->
+            <% include ../../elements/footer %>
+        </div>
+        <% include ../../elements/scroll-top %>
+    </div>
+    <% include ../../elements/script %>
+</body>
+
+</html>
