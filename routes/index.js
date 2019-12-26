@@ -5,9 +5,19 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('pages/home/index',{pageTitle: 'Trang chủ'});
 });
-router.get('/change-user-info', function(req, res, next) {
-  res.render('pages/change-user-info/index', {pageTitle: 'Thay đổi thông tin người dùng'});
+router.get('/book-infomation', function(req, res, next) {
+  res.render('pages/book-infomation/index', {pageTitle: 'Tra cứu thông tin sách'});
 });
+router.get('/change-book-info', function(req, res, next) {
+  res.render('pages/change-book-info/index', {pageTitle: 'Thay đổi thông tin sách'});
+});
+router.get('/checkout', function(req, res, next) {
+  res.render('pages/checkout/index', {pageTitle: 'Thanh toán tại quầy'});
+});
+router.get('/create-promo', function(req, res, next) {
+  res.render('pages/create-promo/index', {pageTitle: 'Tạo mã khuyến mãi'});
+});
+//refffff
 router.get('/forgot-password', function(req, res, next) {
   res.render('pages/forgot-password/index', {pageTitle: 'Quên mật khẩu'});
 });
@@ -29,7 +39,5 @@ router.get('/manager-users', function(req, res, next) {
 router.get('/sales-detail', function(req, res, next) {
   res.render('pages/sales-detail/index', {pageTitle: 'Thống kê bán hàng'});
 });
-router.get('/top10-detail', function(req, res, next) {
-  res.render('pages/top10-detail/index', {pageTitle: 'Thống kê top 10'});
-});
+
 module.exports = router;

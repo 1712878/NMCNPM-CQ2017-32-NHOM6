@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../../elements/header %>
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <% include ../../elements/nav-left %>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <% include ../../elements/nav-top %>
+            </div>
+            <!-- begin content value -->
+            <div class="container-fluid">
+                <div class="card shadow">
+                    <div class="card-header py-3">
+                        <p class="text-primary m-0 font-weight-bold">Tạo mã khuyễn mãi</p>
+                    </div>
+                    <form class="mx-3 my-3">
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-6">
+                              <label for="promocode">Mã khuyễn mãi</label>
+                              <input type="text" class="form-control" id="promocode">
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-6">
+                              <label for="promosize">Số lượng</label>
+                              <input type="text" class="form-control" id="promosize">
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-6">
+                              <label for="startday">Ngày bắt đầu</label>
+                              <input type="text" class="form-control" id="startday">
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-6">
+                              <label for="endday">Ngày kết thúc</label>
+                              <input type="text" class="form-control" id="endday">
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="btn btn-primary">Tạo mã</div>
+                        </div>
+                    </form>
+                  
+                </div>
+            </div>
+            <!-- end content value -->
+            <% include ../../elements/footer %>
+        </div>
+        <% include ../../elements/scroll-top %>
+    </div>
+    <% include ../../elements/script %>
+</body>
+
+</html>
