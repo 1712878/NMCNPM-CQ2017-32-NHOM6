@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../../elements/header %>
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <% include ../../elements/nav-left %>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <% include ../../elements/nav-top %>
+            </div>
+            <!-- begin content value -->
+            <div class="container-fluid">
+                <div class="card shadow">
+                    <!-- begin top -->
+                    <div class="card-header py-3">
+                        <p class="text-primary m-0 font-weight-bold">Thống kê sách</p>
+                    </div>
+                    <div class="content mx-3 my-3">
+                        <div class="row card-deck mb-3 text-center">
+                            <div class="card mb-3 box-shadow">
+                                <div class="card-header">
+                                  <h4 class="my-0 font-weight-normal">Tổng lợi nhuận</h4>
+                                </div>
+                                <div class="card-body">
+                                  <h1 class="card-title pricing-card-title">$4000</h1>
+                                </div>
+                            </div>
+                            <div class="card mb-3 box-shadow">
+                                <div class="card-header">
+                                    <h4 class="my-0 font-weight-normal">Số sách bán/ngày</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h1 class="card-title pricing-card-title">5000 sách</h1>
+                                </div>
+                            </div>
+                            <div class="card mb-3 box-shadow">
+                                <div class="card-header">
+                                  <h4 class="my-0 font-weight-normal">Số sách trên quầy</h4>
+                                </div>
+                                <div class="card-body">
+                                  <h1 class="card-title pricing-card-title">400000</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row card-deck mb-3 text-center">
+
+                            <div class="card mb-3 box-shadow">
+                                <div class="card-header">
+                                  <h4 class="my-0 font-weight-normal">Số sách tồn kho</h4>
+                                </div>
+                                <div class="card-body">
+                                  <h1 class="card-title pricing-card-title">20000</h1>
+                                </div>
+                            </div>
+                            <div class="card mb-3 box-shadow">
+                                <div class="card-header">
+                                    <h4 class="my-0 font-weight-normal">Số loại sách trên quầy</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h1 class="card-title pricing-card-title">130</h1>
+                                </div>
+                            </div>
+                            <div class="card mb-3 box-shadow">
+                                <div class="card-header">
+                                    <h4 class="my-0 font-weight-normal">Số loại sách trong kho</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h1 class="card-title pricing-card-title">130</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end top -->
+                    <!-- begin bottom  -->
+                    <div class="card-header py-3">
+                        <p class="text-primary m-0 font-weight-bold">Danh sách sách</p>
+                    </div>
+                    <div class="content mx-3 my-3">
+                        <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                            <table class="table dataTable my-0" id="dataTable">
+                                <thead>
+                                    <tr>
+                                        <th>Mã sách</th>
+                                        <th>Tên sách</th>
+                                        <th>Thể loại</th>
+                                        <th>NXB</th>
+                                        <th>Giá</th>
+                                        <th>Tồn kho</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>MS01</td>
+                                        <td>Nhứng đứa trẻ</td>
+                                        <td>VH nước ngoài</td>
+                                        <td>Kim Đồng</td>
+                                        <td>20.000 VNĐ</td>
+                                        <td>199</td>
+                                        <td class="text-center">
+                                            <a href="change-user-info">
+                                                <br>
+                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MS01</td>
+                                        <td>Nhứng đứa trẻ</td>
+                                        <td>VH nước ngoài</td>
+                                        <td>Kim Đồng</td>
+                                        <td>20.000 VNĐ</td>
+                                        <td>199</td>
+                                        <td class="text-center">
+                                            <a href="change-user-info">
+                                                <br>
+                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MS01</td>
+                                        <td>Nhứng đứa trẻ</td>
+                                        <td>VH nước ngoài</td>
+                                        <td>Kim Đồng</td>
+                                        <td>20.000 VNĐ</td>
+                                        <td>199</td>
+                                        <td class="text-center">
+                                            <a href="change-user-info">
+                                                <br>
+                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MS01</td>
+                                        <td>Nhứng đứa trẻ</td>
+                                        <td>VH nước ngoài</td>
+                                        <td>Kim Đồng</td>
+                                        <td>20.000 VNĐ</td>
+                                        <td>199</td>
+                                        <td class="text-center">
+                                            <a href="change-user-info">
+                                                <br>
+                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MS01</td>
+                                        <td>Nhứng đứa trẻ</td>
+                                        <td>VH nước ngoài</td>
+                                        <td>Kim Đồng</td>
+                                        <td>20.000 VNĐ</td>
+                                        <td>199</td>
+                                        <td class="text-center">
+                                            <a href="change-user-info">
+                                                <br>
+                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MS01</td>
+                                        <td>Nhứng đứa trẻ</td>
+                                        <td>VH nước ngoài</td>
+                                        <td>Kim Đồng</td>
+                                        <td>20.000 VNĐ</td>
+                                        <td>199</td>
+                                        <td class="text-center">
+                                            <a href="change-user-info">
+                                                <br>
+                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MS01</td>
+                                        <td>Nhứng đứa trẻ</td>
+                                        <td>VH nước ngoài</td>
+                                        <td>Kim Đồng</td>
+                                        <td>20.000 VNĐ</td>
+                                        <td>199</td>
+                                        <td class="text-center">
+                                            <a href="change-user-info">
+                                                <br>
+                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MS01</td>
+                                        <td>Nhứng đứa trẻ</td>
+                                        <td>VH nước ngoài</td>
+                                        <td>Kim Đồng</td>
+                                        <td>20.000 VNĐ</td>
+                                        <td>199</td>
+                                        <td class="text-center">
+                                            <a href="change-user-info">
+                                                <br>
+                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MS01</td>
+                                        <td>Nhứng đứa trẻ</td>
+                                        <td>VH nước ngoài</td>
+                                        <td>Kim Đồng</td>
+                                        <td>20.000 VNĐ</td>
+                                        <td>199</td>
+                                        <td class="text-center">
+                                            <a href="change-user-info">
+                                                <br>
+                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+    
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td>
+                                            <strong>Mã sách</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Tên sách</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Thể loại</strong>
+                                        </td>
+                                        <td>
+                                            <strong>NXB</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Giá</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Tồn kho</strong>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 align-self-center">
+                                <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Hiện thị 1 đến 10
+                                    trong tổng số 27</p>
+                            </div>
+                            <div class="col-md-6">
+                                <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                                    <ul class="pagination">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">»</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end bottom  -->
+                </div>
+            </div>
+            <!-- end content value -->
+            <% include ../../elements/footer %>
+        </div>
+        <% include ../../elements/scroll-top %>
+    </div>
+    <% include ../../elements/script %>
+</body>
+
+</html>

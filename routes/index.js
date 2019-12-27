@@ -17,6 +17,9 @@ router.get('/checkout', function(req, res, next) {
 router.get('/create-promo', function(req, res, next) {
   res.render('pages/create-promo/index', {pageTitle: 'Tạo mã khuyến mãi'});
 });
+router.get('/book-summary', function(req, res, next) {
+  res.render('pages/book-summary/index', {pageTitle: 'Thống kê sách'});
+});
 //refffff
 router.get('/forgot-password', function(req, res, next) {
   res.render('pages/forgot-password/index', {pageTitle: 'Quên mật khẩu'});
