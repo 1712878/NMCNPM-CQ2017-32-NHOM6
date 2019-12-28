@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../../elements/header %>
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <% include ../../elements/nav-left %>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <% include ../../elements/nav-top %>
+            </div>
+            <!-- begin content value -->
+            <div class="container-fluid">
+                <header></header>
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow">
+                            <div class="card-header py-3">
+                                <p class="text-primary m-0 font-weight-bold">THỐNG KÊ</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <span>Chọn thời gian</span>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-control form-control-sm custom-select custom-select-sm">
+                                            <option value="Ngày" selected="">Ngày</option>
+                                            <option value="Tuần">Tuần</option>
+                                            <option value="Tháng">Tháng</option>
+                                            <option value="Năm">Năm</option>
+                                            <option value="Quý">Quý</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <span>Thống kê theo</span>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-control form-control-sm custom-select custom-select-sm">
+                                            <option value="Ngày" selected="">Tất cả</option>
+                                            <option value="Gian hàng 1">Doanh Thu</option>
+                                            <option value="Gian hàng 2">Lương của nhân viên</option>
+                                            <option value="Gian hàng 3">Điện nước-chi phí khác</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 text-nowrap offset-sm-6">
+                                        <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable">
+                                            <label>Hiện thị&nbsp;
+                                                <select class="form-control form-control-sm custom-select custom-select-sm">
+                                                    <option value="10" selected="">10</option>
+                                                    <option value="25">25</option>
+                                                    <option value="50">50</option>
+                                                    <option value="100">100</option>
+                                                </select>&nbsp;
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="text-md-right dataTables_filter" id="dataTable_filter">
+                                            <label>
+                                                <input type="search" class="form-control form-control-sm" aria-controls="dataTable"
+                                                    placeholder="Tìm kiếm">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <p class="text-primary m-0 font-weight-bold">Doanh Thu</p>
+                                    </div>
+                                </div>
+                                <div class="table-responsive table mt-2" id="dataTable" role="grid"
+                                    aria-describedby="dataTable_info">
+                                    <table class="table dataTable my-0" id="dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Thời gian</th>
+                                                <th>Số lượng bán</th>
+                                                <th>Chi phí</th>
+                                                <th>Chi tiêu</th>
+                                                <th>Số lượng tồn</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1/10/2019</td>
+                                                <td>100000</td>
+                                                <td>1800</td>
+                                                <td>1200</td>
+                                                <td>920</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1/10/2019</td>
+                                                <td>100000</td>
+                                                <td>1800</td>
+                                                <td>1200</td>
+                                                <td>920</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1/10/2019</td>
+                                                <td>100000</td>
+                                                <td>1800</td>
+                                                <td>1200</td>
+                                                <td>920</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1/10/2019</td>
+                                                <td>100000</td>
+                                                <td>1800</td>
+                                                <td>1200</td>
+                                                <td>920</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1/10/2019</td>
+                                                <td>100000</td>
+                                                <td>1800</td>
+                                                <td>1200</td>
+                                                <td>920</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1/10/2019</td>
+                                                <td>100000</td>
+                                                <td>1800</td>
+                                                <td>1200</td>
+                                                <td>920</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1/10/2019</td>
+                                                <td>100000</td>
+                                                <td>1800</td>
+                                                <td>1200</td>
+                                                <td>920</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1/10/2019</td>
+                                                <td>100000</td>
+                                                <td>1800</td>
+                                                <td>1200</td>
+                                                <td>920</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1/10/2019</td>
+                                                <td>100000</td>
+                                                <td>1800</td>
+                                                <td>1200</td>
+                                                <td>920</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1/10/2019</td>
+                                                <td>100000</td>
+                                                <td>1800</td>
+                                                <td>1200</td>
+                                                <td>920</td>
+                                            </tr>
+
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td>
+                                                    <strong>Thời gian</strong>
+                                                </td>
+                                                <td>
+                                                    <strong>Số lượng bán</strong>
+                                                </td>
+                                                <td>
+                                                    <strong>Chi phí</strong>
+                                                </td>
+                                                <td>
+                                                    <strong>Chi tiêu</strong>
+                                                </td>
+                                                <td>
+                                                    <strong>Số lượng tồn</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><strong style="color: red;">Tổng cộng:</strong></td>
+                                                <td><strong style="color:red">54565151565</strong></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 align-self-center">
+                                        <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Hiện thị 1
+                                            đến 10 của 27</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                                            <ul class="pagination">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">«</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="#">1</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">2</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">3</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span aria-hidden="true">»</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            <hr>
+                                <div class="row mb-3 mt-3">
+                                    <div class="col">
+                                        <p class="text-primary m-0 font-weight-bold">Lương Nhân Viên</p>
+                                    </div>
+                                </div>
+                                <div class="table-responsive table mt-2" id="dataTable" role="grid"
+                                    aria-describedby="dataTable_info">
+                                    <table class="table dataTable my-0" id="dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Tên nhân viên</th>
+                                                <th>Vị trí làm việc</th>
+                                                <th>Số ngày làm việc</th>
+                                                <th>Tiền lương tháng</th>
+                                                <th>Tổng cộng</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Nguyễn Thanh Tùng</td>
+                                                <td>Dọn rác</td>
+                                                <td>28</td>
+                                                <td>150000</td>
+                                                <td>150000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nguyễn Thọ Tuấn</td>
+                                                <td>Dọn vệ sinh</td>
+                                                <td>28</td>
+                                                <td>150000</td>
+                                                <td>150000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Võ Nhật Tường</td>
+                                                <td>Bảo vệ</td>
+                                                <td>28</td>
+                                                <td>150000</td>
+                                                <td>150000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nguyễn Thanh Tùng</td>
+                                                <td>Dọn rác</td>
+                                                <td>28</td>
+                                                <td>150000</td>
+                                                <td>150000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nguyễn Thọ Tuấn</td>
+                                                <td>Dọn vệ sinh</td>
+                                                <td>28</td>
+                                                <td>150000</td>
+                                                <td>150000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Võ Nhật Tường</td>
+                                                <td>Bảo vệ</td>
+                                                <td>28</td>
+                                                <td>150000</td>
+                                                <td>150000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nguyễn Thanh Tùng</td>
+                                                <td>Dọn rác</td>
+                                                <td>28</td>
+                                                <td>150000</td>
+                                                <td>150000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nguyễn Thọ Tuấn</td>
+                                                <td>Dọn vệ sinh</td>
+                                                <td>28</td>
+                                                <td>150000</td>
+                                                <td>150000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Võ Nhật Tường</td>
+                                                <td>Bảo vệ</td>
+                                                <td>28</td>
+                                                <td>150000</td>
+                                                <td>150000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Võ Nhật Tường</td>
+                                                <td>Bảo vệ</td>
+                                                <td>28</td>
+                                                <td>150000</td>
+                                                <td>150000</td>
+                                            </tr>
+
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td>
+                                                    <strong>Tên nhân viên</strong>
+                                                </td>
+                                                <td>
+                                                    <strong>Vị trí làm việc</strong>
+                                                </td>
+                                                <td>
+                                                    <strong>Số ngày</strong>
+                                                </td>
+                                                <td>
+                                                    <strong>Tiền lương</strong>
+                                                </td>
+                                                <td>
+                                                    <strong>Tổng cộng</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><strong style="color: red;">Tổng cộng:</strong></td>
+                                                <td><strong style="color:red">54565151565</strong></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 align-self-center">
+                                        <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Hiện thị 1
+                                            đến 10 của 27</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                                            <ul class="pagination">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">«</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="#">1</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">2</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">3</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span aria-hidden="true">»</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row mb-3 mt-3">
+                                    <div class="col">
+                                        <p class="text-primary m-0 font-weight-bold">Điện nước-Chi phí khác</p>
+                                    </div>
+                                </div>
+                                <div class="table-responsive table mt-2" id="dataTable" role="grid"
+                                    aria-describedby="dataTable_info">
+                                    <table class="table dataTable my-0" id="dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Tên khoản chi</th>
+                                                <th>Số tiền</th>
+                                                <th>Ghi chú</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tiền lương</td>
+                                                <td>464848989</td>
+                                                <td>Đã trả</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tiền điện</td>
+                                                <td>464848989</td>
+                                                <td>Đã trả</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tiền nước</td>
+                                                <td>464848989</td>
+                                                <td>Đã trả</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tiền rác</td>
+                                                <td>464848989</td>
+                                                <td>Đã trả</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tiền thuê mặt bằng</td>
+                                                <td>464848989</td>
+                                                <td>Đã trả</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tiền hư sách</td>
+                                                <td>464848989</td>
+                                                <td>Đã trả</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tiền mạng</td>
+                                                <td>464848989</td>
+                                                <td>Đã trả</td>
+                                            </tr>
+
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td>
+                                                    <strong>Tên khoản chi</strong>
+                                                </td>
+                                                <td>
+                                                    <strong>Số tiền</strong>
+                                                </td>
+                                                <td>
+                                                    <strong>Ghi chú</strong>
+                                                </td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                               
+                                                <td><strong style="color: red;">Tổng cộng:</strong></td>
+                                                <td><strong style="color:red">54565151565</strong></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 align-self-center">
+                                        <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Hiện thị 1
+                                            đến 10 của 27</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                                            <ul class="pagination">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">«</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="#">1</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">2</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">3</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span aria-hidden="true">»</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end content value -->
+            <% include ../../elements/footer %>
+        </div>
+        <% include ../../elements/scroll-top %>
+    </div>
+    <% include ../../elements/script %>
+</body>
+
+</html>

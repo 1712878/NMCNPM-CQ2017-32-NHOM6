@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../../elements/header %>
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+       
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <% include ../../elements/nav-top %>
+            </div>
+              <!-- begin content value -->
+             <div class="container">
+                <div class="card-header py-3 offset-5">
+                    <p class="text-primary m-0 font-weight-bold">CẬP NHẬT THÔNG TIN ĐƠN HÀNG</p>
+                </div>
+                <form>
+                    <div class="form-group row">
+                      <label for="username" class="col-sm-2 col-form-label">Người nhận</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="username" placeholder="Tên người nhận">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="address" class="col-sm-2 col-form-label">Địa chỉ nhận hàng</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="address" placeholder="Địa chỉ nhận hàng">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="mathang" class="col-sm-2 col-form-label">Mặt hàng</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="mathang" placeholder="Mặt hàng">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="datecreate" class="col-sm-2 col-form-label">Ngày tạo đơn</label>
+                        <div class="col-sm-10">
+                          <input type="date" class="form-control" id="datecreate" placeholder="Ngày tạo đơn">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="price" class="col-sm-2 col-form-label">Số tiền</label>
+                        <div class="col-sm-10">
+                          <input type="number" class="form-control" id="price" placeholder="Số tiền">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="trangthai" class="col-sm-2 col-form-label">Trạng thái</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="trangthai" placeholder="Trạng thái">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-sm-6 offset-6">
+                          <button type="submit" class="btn btn-primary">Cập nhật</button>
+                        </div>
+                      </div>
+
+                  </form>
+             </div>
+
+
+              <!-- end content value -->
+              <% include ../../elements/footer %>
+            </div>
+            <% include ../../elements/scroll-top %>
+        </div>
+        <% include ../../elements/script %>
+    </body>
+    
+    </html>

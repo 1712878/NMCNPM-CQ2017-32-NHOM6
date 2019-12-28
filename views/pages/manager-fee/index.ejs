@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../../elements/header %>
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <% include ../../elements/nav-left %>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <% include ../../elements/nav-top %>
+            </div>
+            <!-- begin content value -->
+            <div class="container-fluid">
+                <!-- begin luongnv -->
+                <div class="card shadow">
+                    <div class="card-header py-3">
+                        <p class="text-primary m-0 font-weight-bold">Tiền lương nhân viên</p>
+                    </div>
+                    <form class="mx-3 my-3">
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-6">
+                              <label for="promocode">Mã nhân viên</label>
+                              <input type="text" class="form-control" id="promocode">
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-6">
+                                <label for="category">Vị trí làm việc</label>
+                            <div class="dropdown" id="category" >
+                                <button class="btn btn-light dropdown-toggle w-100 text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Thu ngân - 8.000.000
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <span class="dropdown-item" > Thu ngân - 8.000.000</span>
+                                    <span class="dropdown-item" > Lao công - 5.000.000</span>
+                                    <span class="dropdown-item" > Bảo vệ - 5.000.000</span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-6">
+                              <label for="promosize">Số ngày nghỉ</label>
+                              <input type="text" class="form-control" id="promosize">
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-6">
+                              <label for="startday">Thưởng</label>
+                              <input type="text" class="form-control" id="startday">
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="btn btn-primary">Cập nhật</div>
+                        </div>
+                    </form>
+                </div>
+                <!-- end luongnv  -->
+                <!-- begin tiendien  -->
+                <div class="card shadow">
+                    <div class="card-header py-3">
+                        <p class="text-primary m-0 font-weight-bold">Tiền điện</p>
+                    </div>
+                    <form class="mx-3 my-3">
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-6">
+                              <label for="promocode">Số điện tháng trước</label>
+                              <input type="text" class="form-control" id="promocode">
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-6">
+                              <label for="promosize">Số điện tháng này</label>
+                              <input type="text" class="form-control" id="promosize">
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-6">
+                              <label for="startday">Đơn giá</label>
+                              <input type="text" class="form-control" id="startday">
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="btn btn-primary">Cập nhật</div>
+                        </div>
+                    </form>
+                </div>
+                <!-- end tiendien  -->
+                <!-- begin tiennuoc  -->
+                <div class="card shadow">
+                    <div class="card-header py-3">
+                        <p class="text-primary m-0 font-weight-bold">Tiền nước</p>
+                    </div>
+                    <form class="mx-3 my-3">
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-6">
+                                <label for="promocode">Số nước tháng trước</label>
+                                <input type="text" class="form-control" id="promocode">
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-6">
+                                <label for="promosize">Số nước tháng này</label>
+                                <input type="text" class="form-control" id="promosize">
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-6">
+                                <label for="startday">Đơn giá</label>
+                                <input type="text" class="form-control" id="startday">
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="btn btn-primary">Cập nhật</div>
+                        </div>
+                    </form>
+                </div>
+                <!-- end tiennuoc  -->
+            </div>
+            <!-- end content value -->
+            <% include ../../elements/footer %>
+        </div>
+        <% include ../../elements/scroll-top %>
+    </div>
+    <% include ../../elements/script %>
+</body>
+
+</html>

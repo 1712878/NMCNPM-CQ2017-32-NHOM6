@@ -20,27 +20,24 @@ router.get('/create-promo', function(req, res, next) {
 router.get('/book-summary', function(req, res, next) {
   res.render('pages/book-summary/index', {pageTitle: 'Thống kê sách'});
 });
-//refffff
+router.get('/statistic', function(req, res, next) {
+  res.render('pages/statistic/index', {pageTitle: 'Thống kê'});
+});
+router.get('/manager-fee', function(req, res, next) {
+  res.render('pages/manager-fee/index', {pageTitle: 'Nhập tiền lương nhân viên, điện, nước'});
+});
+router.get('/manager-order', function(req, res, next) {
+  res.render('pages/manager-order/index', {pageTitle: 'Quản lí đơn hàng'});
+});
+router.get('/update-order', function(req, res, next) {
+  res.render('pages/manager-order/update', {pageTitle: 'Quản lí đơn hàng'});
+});
 router.get('/forgot-password', function(req, res, next) {
   res.render('pages/forgot-password/index', {pageTitle: 'Quên mật khẩu'});
 });
 router.get('/login', function(req, res, next) {
   res.render('pages/login/index', {pageTitle: 'Đăng nhập'});
 });
-router.get('/manager-order', function(req, res, next) {
-  res.render('pages/manager-order/index', {pageTitle: 'Quản lí đơn hàng'});
-});
-router.get('/manager-product', function(req, res, next) {
-  res.render('pages/manager-product/index', {pageTitle: 'Quản lí sản phẩm'});
-});
-router.get('/manager-stall', function(req, res, next) {
-  res.render('pages/manager-stall/index', {pageTitle: 'Quản lí gian hàng'});
-});
-router.get('/manager-users', function(req, res, next) {
-  res.render('pages/manager-users/index', {pageTitle: 'Quản lí người dùng'});
-});
-router.get('/sales-detail', function(req, res, next) {
-  res.render('pages/sales-detail/index', {pageTitle: 'Thống kê bán hàng'});
-});
+
 
 module.exports = router;
