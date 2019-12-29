@@ -8,72 +8,70 @@
 <body id="page-top">
     <div id="wrapper">
         <% include ../../elements/nav-left %>
-        <div class="d-flex flex-column" id="content-wrapper">
-            <div id="content">
-                <% include ../../elements/nav-top %>
-            </div>
-            <!-- begin content value -->
-            <div class="container-fluid">
-                <div class="card shadow">
-                    <div class="card-header py-3">
-                        <p class="text-primary m-0 font-weight-bold">Tra cứu thông tin sách</p>
-                    </div>
-                    <form class="mx-3 my-3">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                              <label for="bookid">Mã sách</label>
-                              <input type="text" class="form-control" id="bookid">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="bookname">Tên sách</label>
-                                <input type="text" class="form-control" id="bookname">
-                            </div>
+            <div class="d-flex flex-column" id="content-wrapper">
+                <div id="content">
+                    <% include ../../elements/nav-top %>
+                </div>
+                <!-- begin content value -->
+                <div class="container-fluid">
+                    <div class="card shadow">
+                        <div class="card-header py-3">
+                            <p class="text-primary m-0 font-weight-bold">Tra cứu thông tin sách</p>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="publishing">Nhà xuất bản</label>
-                                <input type="text" class="form-control" id="publishing">
-                            </div>
-                            
-                            <div class="form-group col-md-6">
-                            <label for="category">Thể loại</label>
-                            <div class="dropdown" id="category" >
-                                <button class="btn btn-light dropdown-toggle w-100 text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Văn học nước ngoài
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <span class="dropdown-item" > Văn học nước ngoài</span>
-                                    <span class="dropdown-item" > Văn học nước ngoài 2</span>
-                                    <span class="dropdown-item" > Văn học nước ngoài 3</span>
+                        <form class="mx-3 my-3" method="GET">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="bookid">Mã sách</label>
+                                    <input name="bookid" type="text" class="form-control" id="bookid">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="bookname">Tên sách</label>
+                                    <input name="bookname" type="text" class="form-control" id="bookname">
                                 </div>
                             </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="publishing">Nhà xuất bản</label>
+                                    <input name="publisher" type="text" class="form-control" id="publishing">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="category">Thể loại</label>
+                                    <div class="dropdown" id="category">
+                                        <select name="category" id="category">
+                                            <option class="dropdown-item" value=""> Văn học nước ngoài</span>
+                                            <option class="dropdown-item" value=""> Văn học nước ngoài 2</span>
+                                            <option class="dropdown-item" value=""> Văn học nước ngoài 3</span>
+                                        </select>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md">
-                                <label for="isbn">ISBN</label>
-                                <input type="text" class="form-control" id="isbn">
-                              </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="minprice">Giá tối thiểu</label>
-                                <input type="text" class="form-control" id="minprice">
+                            <div class="form-row">
+                                <div class="form-group col-md">
+                                    <label for="isbn">ISBN</label>
+                                    <input name="bookid" type="text" class="form-control" id="isbn" name="isbn">
+                                </div>
                             </div>
-                            <div class="form-group col-md-6">
-                                <label for=";maxprice">Giá tối đa</label>
-                                <input type="text" class="form-control" id="maxprice">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="minprice">Giá tối thiểu</label>
+                                    <input type="text" class="form-control" id="minprice" name="maxprice">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for=";maxprice">Giá tối đa</label>
+                                    <input type="text" class="form-control" id="maxprice" name="maxprice">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-row justify-content-center">
-                            <div class="btn btn-primary">Tìm kiếm</div>
-                        </div>
-                    </form>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-6 text-nowrap">
-                                <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable">
-                                    <label>Số lượng / trang&nbsp;
+                            <div class="form-row justify-content-center">
+                                <button type="submit" class="btn btn-primary">Tìm kiếm</div>
+                            </div>
+                        </form>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 text-nowrap">
+                                    <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable">
+                                        <label>Số lượng / trang&nbsp;
                                         <select class="form-control form-control-sm custom-select custom-select-sm">
                                             <option value="10" selected="">10</option>
                                             <option value="25">25</option>
@@ -81,212 +79,87 @@
                                             <option value="100">100</option>
                                         </select>&nbsp;
                                     </label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
-                            <table class="table dataTable my-0" id="dataTable">
-                                <thead>
-                                    <tr>
-                                        <th>Mã sách</th>
-                                        <th>Tên sách</th>
-                                        <th>Thể loại</th>
-                                        <th>NXB</th>
-                                        <th>Giá</th>
-                                        <th>Tồn kho</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>MS01</td>
-                                        <td>Nhứng đứa trẻ</td>
-                                        <td>VH nước ngoài</td>
-                                        <td>Kim Đồng</td>
-                                        <td>20.000 VNĐ</td>
-                                        <td>199</td>
-                                        <td class="text-center">
-                                            <a href="change-book-info">
-                                                <br>
-                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>MS01</td>
-                                        <td>Nhứng đứa trẻ</td>
-                                        <td>VH nước ngoài</td>
-                                        <td>Kim Đồng</td>
-                                        <td>20.000 VNĐ</td>
-                                        <td>199</td>
-                                        <td class="text-center">
-                                            <a href="change-book-info">
-                                                <br>
-                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>MS01</td>
-                                        <td>Nhứng đứa trẻ</td>
-                                        <td>VH nước ngoài</td>
-                                        <td>Kim Đồng</td>
-                                        <td>20.000 VNĐ</td>
-                                        <td>199</td>
-                                        <td class="text-center">
-                                            <a href="change-book-info">
-                                                <br>
-                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>MS01</td>
-                                        <td>Nhứng đứa trẻ</td>
-                                        <td>VH nước ngoài</td>
-                                        <td>Kim Đồng</td>
-                                        <td>20.000 VNĐ</td>
-                                        <td>199</td>
-                                        <td class="text-center">
-                                            <a href="change-book-info">
-                                                <br>
-                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>MS01</td>
-                                        <td>Nhứng đứa trẻ</td>
-                                        <td>VH nước ngoài</td>
-                                        <td>Kim Đồng</td>
-                                        <td>20.000 VNĐ</td>
-                                        <td>199</td>
-                                        <td class="text-center">
-                                            <a href="change-book-info">
-                                                <br>
-                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>MS01</td>
-                                        <td>Nhứng đứa trẻ</td>
-                                        <td>VH nước ngoài</td>
-                                        <td>Kim Đồng</td>
-                                        <td>20.000 VNĐ</td>
-                                        <td>199</td>
-                                        <td class="text-center">
-                                            <a href="change-book-info">
-                                                <br>
-                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>MS01</td>
-                                        <td>Nhứng đứa trẻ</td>
-                                        <td>VH nước ngoài</td>
-                                        <td>Kim Đồng</td>
-                                        <td>20.000 VNĐ</td>
-                                        <td>199</td>
-                                        <td class="text-center">
-                                            <a href="change-book-info">
-                                                <br>
-                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>MS01</td>
-                                        <td>Nhứng đứa trẻ</td>
-                                        <td>VH nước ngoài</td>
-                                        <td>Kim Đồng</td>
-                                        <td>20.000 VNĐ</td>
-                                        <td>199</td>
-                                        <td class="text-center">
-                                            <a href="change-book-info">
-                                                <br>
-                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>MS01</td>
-                                        <td>Nhứng đứa trẻ</td>
-                                        <td>VH nước ngoài</td>
-                                        <td>Kim Đồng</td>
-                                        <td>20.000 VNĐ</td>
-                                        <td>199</td>
-                                        <td class="text-center">
-                                            <a href="change-book-info">
-                                                <br>
-                                                <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td>
-                                            <strong>Mã sách</strong>
-                                        </td>
-                                        <td>
-                                            <strong>Tên sách</strong>
-                                        </td>
-                                        <td>
-                                            <strong>Thể loại</strong>
-                                        </td>
-                                        <td>
-                                            <strong>NXB</strong>
-                                        </td>
-                                        <td>
-                                            <strong>Giá</strong>
-                                        </td>
-                                        <td>
-                                            <strong>Tồn kho</strong>
-                                        </td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 align-self-center">
-                                <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Hiện thị 1 đến 10
-                                    trong tổng số 27</p>
+                            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                                <table class="table dataTable my-0" id="dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Mã sách</th>
+                                            <th>Tên sách</th>
+                                            <th>Thể loại</th>
+                                            <th>NXB</th>
+                                            <th>Giá</th>
+                                            <th>Tồn kho</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% books.forEach(book=> {%>
+                                            <% include('../../elements/bookrow',book)%>
+                                        })%>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td>
+                                                <strong>Mã sách</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Tên sách</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Thể loại</strong>
+                                            </td>
+                                            <td>
+                                                <strong>NXB</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Giá</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Tồn kho</strong>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
                             </div>
-                            <div class="col-md-6">
-                                <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
-                                    <ul class="pagination">
-                                        <li class="page-item disabled">
-                                            <a class="page-link" href="#" aria-label="Previous">
-                                                <span aria-hidden="true">«</span>
-                                            </a>
-                                        </li>
-                                        <li class="page-item active">
-                                            <a class="page-link" href="#">1</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#">2</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#">3</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Next">
-                                                <span aria-hidden="true">»</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
+                            <div class="row">
+                                <div class="col-md-6 align-self-center">
+                                    <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Hiện thị 1 đến 10 trong tổng số 27</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                                        <ul class="pagination">
+                                            <li class="page-item disabled">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">«</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item active">
+                                                <a class="page-link" href="#">1</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">2</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">3</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">»</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- end content value -->
+                <% include ../../elements/footer %>
             </div>
-            <!-- end content value -->
-            <% include ../../elements/footer %>
-        </div>
-        <% include ../../elements/scroll-top %>
+            <% include ../../elements/scroll-top %>
     </div>
     <% include ../../elements/script %>
 </body>

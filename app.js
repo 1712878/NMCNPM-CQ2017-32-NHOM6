@@ -6,10 +6,9 @@ var logger = require('morgan');
 const passport = require('./config/passport');
 const session = require('express-session');
 const mongoose = require('mongoose');
-
 var indexRouter = require('./routes/index');
-
 const userRouter = require('./routes/users');
+const bookRouter = require('./routes/book');
 
 mongoose.connect('mongodb+srv://admin:' + encodeURI('admin123') + '@cluster0-hbh4a.mongodb.net/bansach', { useNewUrlParser: true }, function(err) {
     if (err) throw err;
@@ -21,18 +20,12 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-var session = require('express-session');
 
 // required for passport session
 app.use(session({
     secret: 'secrettexthere',
     saveUninitialized: true,
     resave: true,
-    // using store session on MongoDB using express-session + connect
-    store: new MongoStore({
-        url: config.urlMongo,
-        collection: 'sessions'
-    })
 }));
 
 
@@ -50,6 +43,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/book', bookRouter);
+
 app.use('/users', userRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
