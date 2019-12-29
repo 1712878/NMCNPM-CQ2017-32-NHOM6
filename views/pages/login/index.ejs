@@ -18,16 +18,17 @@
                             <div class="text-center">
                                 <h4 class="text-dark mb-4">Đăng nhập trang web quản trị</h4>
                             </div>
-                            <form class="user">
-                                <div class="form-group"><input class="form-control form-control-user" type="email" id="exampleInputEmail" placeholder="Nhập email ..." name="email""></div>
-                                <div class="form-group"><input class="form-control form-control-user" type="password" id="exampleInputPassword" placeholder="Nhập mật khẩu ..." name="password"></div>
+                            <form class="user" method="POST" action="/login">
                                 <div class="form-group">
-                                    <div class="custom-control custom-checkbox small">
-                                        <div class="form-check"><input class="form-check-input custom-control-input" type="checkbox" id="formCheck-1"><label class="form-check-label custom-control-label" for="formCheck-1">Ghi nhớ đăng nhập</label></div>
+                                    <input class="form-control form-control-user" type="text" id="exampleInputEmail" placeholder="username" name="username"></div>
+                                <div class="form-group "><input class="form-control form-control-user " type="password" id="exampleInputPassword" placeholder="Nhập mật khẩu ... " name="password"></div>
+                                <div class="form-group ">
+                                    <div class="custom-control custom-checkbox small ">
+                                        <div class="form-check "><input class="form-check-input custom-control-input " type="checkbox " id="formCheck-1 "><label class="form-check-label custom-control-label " for="formCheck-1 ">Ghi nhớ đăng nhập</label></div>
                                     </div>
-                                </div><a class="btn btn-primary btn-block btn-user" href="/admin">Đăng nhập</a></form>
-                            <div class="text-center"><a class="small" href="forgot-password">Quên mật khẩu?</a></div>
-                            <div class="text-center"></div>
+                                </div><button class="btn btn-primary btn-block btn-user " type="submit">Đăng nhập</a></form>
+                            <div class="text-center "><a class="small " href="/forgot-password ">Quên mật khẩu?</a></div>
+                            <div class="text-center "></div>
                         </div>
                     </div>
                 </div>
