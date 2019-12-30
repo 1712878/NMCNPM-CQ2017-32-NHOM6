@@ -3,6 +3,8 @@ var router = express.Router();
 var passport = require('../config/passport');
 var Book = require('../models/book');
 var promoRouter = require('./promocode');
+var checkoutController = require('../controllers/checkoutController');
+
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -12,6 +14,9 @@ router.get('/', function(req, res, next) {
 router.get('/checkout', function(req, res, next) {
     res.render('pages/checkout/index', { pageTitle: 'Thanh toán tại quầy' });
 });
+router.post('/checkout', async(req, res, next) => {
+    checkoutController.checkout(req, res, next);
+})
 router.use('/create-promo', promoRouter);
 router.get('/statistic', function(req, res, next) {
     res.render('pages/statistic/index', { pageTitle: 'Thống kê' });
