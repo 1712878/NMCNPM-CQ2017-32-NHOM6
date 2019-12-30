@@ -95,9 +95,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <% books.forEach(book=> {%>
-                                            <% include('../../elements/bookrow',book)%>
-                                        })%>
+                                        <% listbook.forEach(function(book) { %>
+                                           <tr>
+                                            <td><%=book.bookid %></td>
+                                            <td><%=book.name %></td>
+                                            <td><%=book.author %></td>
+                                            <td><%=book.publisher %></td>
+                                            <td><%=book.cost %></td>
+                                            <td><%=book.quantity %></td>
+                                        </tr>
+                                        <% }); %>
                                     </tbody>
                                     <tfoot>
                                         <tr>
