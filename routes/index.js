@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/checkout', function(req, res, next) {
-    res.render('pages/checkout/index', { pageTitle: 'Thanh toán tại quầy' });
+    res.render('pages/checkout/index', { pageTitle: 'Thanh toán tại quầy',Notifacation:''});
 });
 router.post('/checkout', async(req, res, next) => {
     checkoutController.checkout(req, res, next);

@@ -4,7 +4,7 @@ module.exports.checkout = async(req, res, next) => {
     if (await Book.exists({ bookid: req.body.bookid })) {
         var b = await Book.findOne({ bookid: req.body.bookid });
         if (b.quantity < req.body.quantity) {
-            res.render('pages/checkout/index', { pageTitle: 'Not enough quantity' });
+            res.render('pages/checkout/index', {pageTitle: 'Thanh toán tại quầy', Notifacation: 'Not enough quantity' });
             return;
         } else {
             var newQuantity = b.quantity - req.body.quantity;
@@ -19,8 +19,8 @@ module.exports.checkout = async(req, res, next) => {
             time: today
         });
         await gd.save();
-        res.render('pages/checkout/index', { pageTitle: 'Success' });
+        res.render('pages/checkout/index', {pageTitle: 'Thanh toán tại quầy', Notifacation: 'Success' });
     } else {
-        res.render('pages/checkout/index', { pageTitle: 'Failed' });
+        res.render('pages/checkout/index', {pageTitle: 'Thanh toán tại quầy', Notifacation: 'Failed' });
     }
 }

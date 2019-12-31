@@ -4,8 +4,8 @@ var passport = require('../config/passport');
 var Book = require('../models/book');
 var Category = require('../models/category');
 
-router.get('/book-summary', function(req, res, next) {
-    let books = Book.find({}).lean();
+router.get('/book-summary', async function(req, res, next) {
+    let books = await Book.find({}).lean();
     res.render('pages/book-summary/index', { pageTitle: 'Thống kê sách', listbook: books });
 });
 router.get('/book-infomation', async function(req, res, next) {
