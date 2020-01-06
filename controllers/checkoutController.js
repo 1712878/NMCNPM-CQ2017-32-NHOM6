@@ -4,7 +4,7 @@ module.exports.checkout = async(req, res, next) => {
     if (await Book.exists({ bookid: req.body.bookid })) {
         let b = await Book.findOne({ bookid: req.body.bookid });
         if (b.quantity < req.body.quantity) {
-            res.render('pages/checkout/index', {pageTitle: 'Thanh toán tại quầy', Notifacation: 'Không đủ số lượng',product:b });
+            res.render('pages/checkout/index', {pageTitle: 'Thanh toán tại quầy',  Notification: 'Thanh toán sản phẩm có ID:'+'"'+b.bookid+'"'+'có tên sách là:'+'"'+b.name +'": '+ 'Không đủ số lượng'});
             return;
         } else {
             var newQuantity = b.quantity - req.body.quantity;
@@ -19,8 +19,8 @@ module.exports.checkout = async(req, res, next) => {
             time: today
         });
         await gd.save();
-        res.render('pages/checkout/index', {pageTitle: 'Thanh toán tại quầy', Notifacation: 'Thành công' ,product:b});
+        res.render('pages/checkout/index', {pageTitle: 'Thanh toán tại quầy',   Notification: 'Thanh toán sản phẩm có ID:'+'"'+b.bookid+'"'+'có tên sách là:'+'"'+b.name +'": '+ 'Thành công'});
     } else {
-        res.render('pages/checkout/index', {pageTitle: 'Thanh toán tại quầy', Notifacation: 'Thất bại',product:'' });
+        res.render('pages/checkout/index', {pageTitle: 'Thanh toán tại quầy',Notification:'Thanh toán thất bại:"Không có thông tin sách"'});
     }
 }

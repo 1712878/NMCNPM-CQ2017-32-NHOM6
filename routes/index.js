@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var passport = require('../config/passport');
+var passport = require('passport');
 var Book = require('../models/book');
 var promoRouter = require('./promocode');
 var checkoutController = require('../controllers/checkoutController');
@@ -8,11 +8,11 @@ var checkoutController = require('../controllers/checkoutController');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    res.render('pages/home/index', { pageTitle: 'Trang chủ' });
+    res.render('pages/login/index', { pageTitle: 'Trang chủ' });
 });
 
-router.get('/checkout', function(req, res, next) {
-    res.render('pages/checkout/index', { pageTitle: 'Thanh toán tại quầy',Notifacation:'',product:''});
+router.get('/checkout', async function(req, res, next) {
+    res.render('pages/checkout/index', { pageTitle: 'Thanh toán tại quầy',Notification:''});
 });
 router.post('/checkout', async(req, res, next) => {
     checkoutController.checkout(req, res, next);
@@ -35,9 +35,18 @@ router.get('/forgot-password', function(req, res, next) {
 });
 router.get('/login', (req, res, next) => {
     res.render('pages/login/index', { pageTitle: 'Đăng nhập' });
-})
-router.post('/login', passport.authenticate('local', {
-    failureRedirect: '/login',
-    successRedirect: '/'
+});
+  /* Handle Login POST */
+router.post('/', passport.authenticate('login', {
+    successRedirect: '/statistic',
+    failureRedirect: '/'
+}));
+router.get('/signup', function(req, res, next) {
+    res.render('pages/signup/index',{ pageTitle: 'Đăng ký'} );
+});
+/* Handle SignUp POST */
+router.post('/signup', passport.authenticate('signup', {
+    successRedirect: '/',
+    failureRedirect: '/signup' 
 }));
 module.exports = router;

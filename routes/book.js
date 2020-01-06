@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var passport = require('../config/passport');
 var Book = require('../models/book');
 var Category = require('../models/category');
 
