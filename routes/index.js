@@ -4,7 +4,7 @@ var passport = require('passport');
 var Book = require('../models/book');
 var promoRouter = require('./promocode');
 var checkoutController = require('../controllers/checkoutController');
-
+var bookController = require('../controllers/bookController');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -12,11 +12,14 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/checkout', async function(req, res, next) {
-    res.render('pages/checkout/index', { pageTitle: 'Thanh toán tại quầy',Notification:''});
+    res.render('pages/checkout/index', { pageTitle: 'Thanh toán tại quầy', Notification: '' });
 });
 router.post('/checkout', async(req, res, next) => {
     checkoutController.checkout(req, res, next);
 })
+router.get('/book/check-info', (req, res, next) => {
+    bookController.checkBookPrice(req, res, next);
+});
 router.use('/create-promo', promoRouter);
 router.get('/statistic', function(req, res, next) {
     res.render('pages/statistic/index', { pageTitle: 'Thống kê' });
@@ -36,17 +39,17 @@ router.get('/forgot-password', function(req, res, next) {
 router.get('/login', (req, res, next) => {
     res.render('pages/login/index', { pageTitle: 'Đăng nhập' });
 });
-  /* Handle Login POST */
+/* Handle Login POST */
 router.post('/', passport.authenticate('login', {
     successRedirect: '/statistic',
     failureRedirect: '/'
 }));
 router.get('/signup', function(req, res, next) {
-    res.render('pages/signup/index',{ pageTitle: 'Đăng ký'} );
+    res.render('pages/signup/index', { pageTitle: 'Đăng ký' });
 });
 /* Handle SignUp POST */
 router.post('/signup', passport.authenticate('signup', {
     successRedirect: '/',
-    failureRedirect: '/signup' 
+    failureRedirect: '/signup'
 }));
 module.exports = router;
