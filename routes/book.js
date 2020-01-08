@@ -30,7 +30,14 @@ router.get('/book-infomation', async function(req, res, next) {
     if (req.query.bookname)
         booksQuery = booksQuery.where('name').regex(req.query.bookname);
     let books = await booksQuery.lean().exec();
-    res.render('pages/book-infomation/index', { pageTitle: 'Tra cứu thông tin sách', listbook: books });
+    let Arr_Category=new Array();
+    for(let i=0;i<books.length;i++)
+    {
+        let temp= await Category.findOne({'categoryid':books[i].category});
+        Arr_Category.push(temp.name);
+    }
+    console.log(Arr_Category )
+    res.render('pages/book-infomation/index', { pageTitle: 'Tra cứu thông tin sách', listbook: books ,listCategory:Arr_Category});
 });
 
 router.get('/change-book-info', function(req, res, next) {
