@@ -68,225 +68,29 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>F15565</td>
-                                        <td>
-                                            <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/avatars/avatar1.jpeg">Nguyễn Văn A
-                                        </td>
-                                        <td>Bình Thạnh, TP. HCM</td>
-                                        <td>Người mới</td>
-                                        <td>2008/11/28</td>
-                                        <td>$162,700</td>
-                                        <td>Đã giao</td>
-                                        <td>
-                                            <a href="/update-order"><img class="rounded-circle mr-2" width="30" height="30"
-                                            src="assets/img/rotation.png">
-                                        </a>
-                                           <a href="#"> <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/x-button.png">
+                                    <% Orders.forEach(function(order) { %>
+                                        <tr>
+                                            <td>F15565</td>
+                                            <td>
+                                                <img class="rounded-circle mr-2" width="30" height="30"
+                                                    src="assets/img/avatars/avatar1.jpeg"><%= order.nameorder%>
+                                            </td>
+                                            <td><%= order.address%></td>
+                                            <td>(ID book): <%= order.bookId%></td>
+                                            <td><%= order.time%></td>
+                                            <td><%= order.total%></td>
+                                            <td>Đã giao</td>
+                                            <td>
+                                                <a href="/update-order"><img class="rounded-circle mr-2" width="30" height="30" id="update_infor"
+                                                src="assets/img/rotation.png">
                                             </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>F15565</td>
-                                        <td>
-                                            <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/avatars/avatar2.jpeg">Nguyễn Văn A
-                                        </td>
-                                        <td>Quận 4, TP. HCM</td>
-                                        <td>Thế giới động vật</td>
-                                        <td>2009/10/09
-                                            <br>
-                                        </td>
-                                        <td>$1,200,000</td>
-                                        <td>Chưa giao</td>
-                                        <td>
-                                            <a href="/update-order"><img class="rounded-circle mr-2" width="30" height="30"
-                                            src="assets/img/rotation.png">
-                                        </a>
-                                           <a href="#"> <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/x-button.png">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>F15565</td>
-                                        <td>
-                                            <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/avatars/avatar3.jpeg">Nguyễn Văn A
-                                        </td>
-                                        <td>Quận 9, TP. HCM</td>
-                                        <td>Hoa vàng trên cỏ</td>
-                                        <td>2009/01/12
-                                            <br>
-                                        </td>
-                                        <td>$86,000</td>
-                                        <td>Đã giao</td>
-                                        <td>
-                                            <a href="/update-order"><img class="rounded-circle mr-2" width="30" height="30"
-                                            src="assets/img/rotation.png">
-                                        </a>
-                                           <a href="#"> <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/x-button.png">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>F15565</td>
-                                        <td>
-                                            <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/avatars/avatar4.jpeg">Nguyễn Văn A
-                                        </td>
-                                        <td>Quận 4, TP. HCM</td>
-                                        <td>Bí kíp</td>
-                                        <td>2012/10/13
-                                            <br>
-                                        </td>
-                                        <td>$132,000</td>
-                                        <td>Chưa giao</td>
-                                        <td>
-                                            <a href="/update-order"><img class="rounded-circle mr-2" width="30" height="30"
-                                            src="assets/img/rotation.png">
-                                        </a>
-                                           <a href="#"> <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/x-button.png">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>F15565</td>
-                                        <td>
-                                            <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/avatars/avatar5.jpeg">Nguyễn Văn A
-                                        </td>
-                                        <td>Quận 9, TP. HCM</td>
-                                        <td>Lửa thiêng</td>
-                                        <td>2011/06/07
-                                            <br>
-                                        </td>
-                                        <td>$206,850</td>
-                                        <td>Đã giao</td>
-                                        <td>
-                                            <a href="/update-order"><img class="rounded-circle mr-2" width="30" height="30"
-                                            src="assets/img/rotation.png">
-                                        </a>
-                                           <a href="#"> <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/x-button.png">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>F15565</td>
-                                        <td>
-                                            <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/avatars/avatar1.jpeg">Nguyễn Văn A
-                                        </td>
-                                        <td>Bình Thạnh, TP. HCM</td>
-                                        <td>Bình Ngô Đại Cáo</td>
-                                        <td>2012/12/02
-                                            <br>
-                                        </td>
-                                        <td>$372,000</td>
-                                        <td>Chưa giao</td>
-                                        <td>
-                                            <a href="/update-order"><img class="rounded-circle mr-2" width="30" height="30"
-                                            src="assets/img/rotation.png">
-                                        </a>
-                                           <a href="#"> <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/x-button.png">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>F15565</td>
-                                        <td>
-                                            <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/avatars/avatar2.jpeg">Nguyễn Văn A
-                                            <br>
-                                        </td>
-                                        <td>Bình Thạnh, TP. HCM</td>
-                                        <td>Kiếp chu du</td>
-                                        <td>2011/05/03
-                                            <br>
-                                        </td>
-                                        <td>$163,500</td>
-                                        <td>Đã giao</td>
-                                        <td>
-                                            <a href="/update-order"><img class="rounded-circle mr-2" width="30" height="30"
-                                            src="assets/img/rotation.png">
-                                        </a>
-                                           <a href="#"> <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/x-button.png">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>F15565</td>
-                                        <td>
-                                            <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/avatars/avatar3.jpeg">Nguyễn Văn A
-                                        </td>
-                                        <td>Quận 4, TP. HCM</td>
-                                        <td>Tam quốc diễn nghĩa</td>
-                                        <td>2011/12/12
-                                            <br>
-                                        </td>
-                                        <td>$106,450</td>
-                                        <td>Chưa giao</td>
-                                        <td>
-                                            <a href="/update-order"><img class="rounded-circle mr-2" width="30" height="30"
-                                            src="assets/img/rotation.png">
-                                        </a>
-                                           <a href="#"> <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/x-button.png">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>F15565</td>
-                                        <td>
-                                            <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/avatars/avatar4.jpeg">Nguyễn Văn A
-                                        </td>
-                                        <td>Bình Thạnh, TP. HCM</td>
-                                        <td>Nhật ký</td>
-                                        <td>2011/12/06
-                                            <br>
-                                        </td>
-                                        <td>$145,600</td>
-                                        <td>Đang giao</td>
-                                        <td>
-                                            <a href="/update-order"><img class="rounded-circle mr-2" width="30" height="30"
-                                            src="assets/img/rotation.png">
-                                        </a>
-                                           <a href="#"> <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/x-button.png">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>F15565</td>
-                                        <td>
-                                            <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/avatars/avatar5.jpeg">Nguyễn Văn A
-                                        </td>
-                                        <td>Quận 9, TP. HCM</td>
-                                        <td>Chuyện nên làm</td>
-                                        <td>2012/03/29
-                                            <br>
-                                        </td>
-                                        <td>$433,060</td>
-                                        <td>Chưa giao</td>
-                                        <td>
-                                            <a href="/update-order"><img class="rounded-circle mr-2" width="30" height="30"
-                                            src="assets/img/rotation.png">
-                                        </a>
-                                           <a href="#"> <img class="rounded-circle mr-2" width="30" height="30"
-                                                src="assets/img/x-button.png">
-                                            </a>
-                                        </td>
-                                    </tr>
+                                               <a href="#"> <img class="rounded-circle mr-2" width="30" height="30"
+                                                    src="assets/img/x-button.png">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                     <% }); %>
+                                    
                                 </tbody>
                                 <tfoot>
                                     <tr>

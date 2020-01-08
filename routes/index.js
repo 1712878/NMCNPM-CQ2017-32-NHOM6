@@ -3,6 +3,7 @@ var router = express.Router();
 var passport = require('passport');
 var Book = require('../models/book');
 var promoRouter = require('./promocode');
+let Man_Order=require('../models/giaodich');
 var checkoutController = require('../controllers/checkoutController');
 var bookController = require('../controllers/bookController');
 
@@ -27,8 +28,10 @@ router.get('/statistic', function(req, res, next) {
 router.get('/manager-fee', function(req, res, next) {
     res.render('pages/manager-fee/index', { pageTitle: 'Nhập tiền lương nhân viên, điện, nước' });
 });
-router.get('/manager-order', function(req, res, next) {
-    res.render('pages/manager-order/index', { pageTitle: 'Quản lí đơn hàng' });
+router.get('/manager-order', async function(req, res, next) {
+    let Arr_oder= await Man_Order.find({});
+    
+    res.render('pages/manager-order/index', { pageTitle: 'Quản lí đơn hàng',Orders:Arr_oder });
 });
 router.get('/update-order', function(req, res, next) {
     res.render('pages/manager-order/update', { pageTitle: 'Quản lí đơn hàng' });
