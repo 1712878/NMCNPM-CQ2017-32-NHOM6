@@ -9,17 +9,20 @@ router.get('/book-summary', async function(req, res, next) {
     let orders=await Order.find({});
     console.log(orders);
     let sumtotal=0,sumbook=0, sumkho=0;
-
+    let Arr_Category=new Array();
     for(let i=0;i<books.length;i++)
     {
         sumkho=sumkho+books[i].quantity;
+        let temp= await Category.findOne({'categoryid':books[i].category});
+        Arr_Category.push(temp.name);
     }
     for(let i=0;i<(await orders).length;i++)
     {
         sumtotal=sumtotal+orders[i].total;
         sumbook=sumbook+orders[i].quantity;
     }
-    res.render('pages/book-summary/index', { pageTitle: 'Thống kê sách', listbook: books ,sumtotal,sumkho,sumbook});
+    console.log(Arr_Category )
+    res.render('pages/book-summary/index', { pageTitle: 'Thống kê sách', listbook: books ,listcategory:Arr_Category,sumtotal,sumkho,sumbook});
 });
 router.get('/book-infomation', async function(req, res, next) {
     let minCost = req.query.minPrice;

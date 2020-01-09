@@ -92,28 +92,22 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <% listbook.forEach(function(book) { %>
+                                        <% for (let i =0; i< listbook.length;  i++ ) { %>
                                             <tr>
-                                                <td>
-                                                    <%=book.bookid %>
-                                                </td>
-                                                <td>
-                                                    <%=book.name%>
-                                                </td>
-                                                <td>
-                                                    <%=book.category%>
-                                                </td>
-                                                <td>
-                                                    <%=book.quantity%>
-                                                </td>
+            
+                                                <td><%=listbook[i].bookid %></td>
+                                                <td><%=listbook[i].name %></td> 
+                                                <td><%= listcategory[i] %></td>
+                                                <td><%=listbook[i].quantity %></td>
                                                 <td class="text-center">
-                                                    <a href="/change-book-info?bookid=<%=book.bookid%>">
+                                                    <a href="/change-book-info?bookid=<%=listbook[i].bookid%>">
                                                         <br>
                                                         <i class="fa fa-edit" style="color: rgb(32,43,127);font-size: 25px;"></i>
                                                     </a>
                                                 </td>
                                             </tr>
-                                            <% }); %>
+                                            <% } %>
+                                       
                                     </tbody>
                                     <tfoot>
                                         <tr>

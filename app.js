@@ -41,6 +41,15 @@ app.use(passport.session());
 var initPassport = require('./passport/init');
 initPassport(passport);
 
+app.use((req,res,next)=>{
+    if(req.user) {
+        res.locals.username=req.user.username;
+    } else {
+    }
+    next();
+
+});
+
 
 app.use('/', indexRouter);
 app.use('/book', bookRouter);
